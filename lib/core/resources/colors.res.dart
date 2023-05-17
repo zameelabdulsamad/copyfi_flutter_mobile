@@ -15,8 +15,10 @@ class ColorsRes {
   static const pageIndicatorInActiveDotColorLight = Color(0xffe2f2e8);
 
   //Button
-  static const buttonForegroundLight = Color(0xffffffff);
-  static const buttonBackgroundLight = Color(0xFF2C5F56);
+  static const buttonEnabledForegroundLight = Color(0xffffffff);
+  static const buttonEnabledBackgroundLight = Color(0xFF2C5F56);
+  static const buttonDisabledForegroundLight = Color(0xffffffff);
+  static const buttonDisabledBackgroundLight = Color(0xFF969696);
 
   static const buttonForegroundDark = Color(0xffffffff);
   static const buttonBackgroundDark = Color(0xffffffff);
@@ -31,6 +33,14 @@ class ColorsRes {
   static const textFieldHintColorDark = Color(0xff858585);
   static const textFieldTextColorDark = Color(0xff000000);
   static const textFieldBorderColorDark = Color(0xff858585);
+
+  //LinearProgressIndicator
+  static const progressIndicatorBackgroundColorLight = Color(0xffbebebe);
+  static const progressIndicatorValueColorLight = Color(0xff000000);
+
+  static const progressIndicatorBackgroundColorDark = Color(0xffbebebe);
+  static const progressIndicatorValueColorDark = Color(0xff000000);
+
 
 
   //Border

@@ -12,25 +12,47 @@ class BottomStatementWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Padding(
-          padding: SizeConfig.paddingHorizontal5,
-          child: Icon(icon),
-        ),
-        Expanded(
-          child: Column(
-            children: [
-              Align(
+    if(icon == null){
+      return Row(
+        children: [
+          Expanded(
+            child: Column(
+              children: [
+                Align(
                   alignment: Alignment.centerLeft,
                   child: P2TextWidget(textContent: textContent),
-              ),
+                ),
 
-            ],
+              ],
+            ),
           ),
-        )
-      ],
-    );
+        ],
+      );
+
+    }else{
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Padding(
+            padding: SizeConfig.paddingHorizontal5,
+            child: Icon(icon),
+          ),
+          Expanded(
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: P2TextWidget(textContent: textContent),
+                ),
+
+              ],
+            ),
+          )
+        ],
+      );
+
+    }
+
+
   }
 }

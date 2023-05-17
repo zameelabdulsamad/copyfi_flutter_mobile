@@ -80,10 +80,8 @@ class LightTheme {
     buttonTheme: const ButtonThemeData(
       buttonColor: ColorsRes.primaryColorLight,
     ),
-    floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        backgroundColor: ColorsRes.buttonBackgroundLight,
-        elevation: 0,
-        foregroundColor: ColorsRes.buttonForegroundLight),
+
+
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         foregroundColor: ColorsRes.primaryColorLight,

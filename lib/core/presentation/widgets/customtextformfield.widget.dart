@@ -27,25 +27,20 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      borderRadius: BorderRadius.circular(20.r),
-      elevation: 5,
-      child: TextFormField(
-        style: Theme.of(context).textTheme.labelMedium,
-        validator: validator,
-        controller: controller,
-        keyboardType: type,
-        obscureText: isPassword,
-        onChanged: onChange,
-        autofocus: autoFocus,
-        decoration: InputDecoration(
-          hintText: hintText,
-          contentPadding: Theme.of(context).inputDecorationTheme.contentPadding,
+    return TextFormField(
+      style: Theme.of(context).textTheme.labelMedium,
+      validator: validator,
+      controller: controller,
+      keyboardType: type,
+      obscureText: isPassword,
+      onChanged: onChange,
+      autofocus: autoFocus,
+      decoration: InputDecoration(
+        hintText: hintText,
+        contentPadding: Theme.of(context).inputDecorationTheme.contentPadding,
 
-          // enabledBorder: Theme.of(context).inputDecorationTheme.enabledBorder,
-          // focusedBorder: Theme.of(context).inputDecorationTheme.focusedBorder,
-        ),
+        // enabledBorder: Theme.of(context).inputDecorationTheme.enabledBorder,
+        // focusedBorder: Theme.of(context).inputDecorationTheme.focusedBorder,
       ),
     );
   }

@@ -8,6 +8,7 @@ class StringRes{
   static const String confirmationCodeStatementP1 = 'A confirmation code will be sent to your phone number to connect with Copyfi.';
   static const String privacyStatementP2 = 'We never share this with anyone.';
   static const String phoneNumberTextFieldHint = 'Phone Number';
+  static const String phoneNumberTextFieldValidator='Please check your number';
   //verifyOtpPage
   static const String verifyNumberH1 = 'Verify your number';
   static const String enterOtpP1 = 'Enter the code we’ve sent by text to ';

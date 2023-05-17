@@ -4,6 +4,9 @@ import 'package:mobile/core/resources/colors.res.dart';
 import 'package:mobile/core/resources/string.res.dart';
 import 'package:mobile/core/utils/lighttheme.utils.dart';
 import 'package:mobile/features/auth/presentation/pages/mobilenumber/mobilenumber.page.dart';
+import 'package:mobile/features/auth/presentation/pages/mobilenumber/veridyotp.page.dart';
+import 'package:mobile/features/auth/presentation/pages/registeration.page.dart';
+import 'package:mobile/features/dashboard/presentation/pages/dashboard.page.dart';
 
 Future<void> main() async {
   await ScreenUtil.ensureScreenSize();
@@ -24,7 +27,7 @@ class MainApp extends StatelessWidget {
             title: StringRes.appName,
             debugShowCheckedModeBanner: false,
             theme: LightTheme.lightTheme,
-            home:  MobileNumberPage(),
+            home:   MobileNumberPage(),
           );
         }
     );
