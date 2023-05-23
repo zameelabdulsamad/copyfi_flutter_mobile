@@ -35,6 +35,7 @@ Future<Either<Failure, T>> repoExecute<T>(RemoteExecutable<T> func) async {
       }
     }
   } on TypeError catch (exception) {
+    print('TypeError: $exception');
     return Left(NetworkFailure(message: "Failed to process data."));
   } catch (exception) {
     return Left(ServerFailure(title: "Unexpected Failure"));

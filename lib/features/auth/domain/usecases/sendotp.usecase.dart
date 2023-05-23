@@ -2,11 +2,11 @@ import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:mobile/core/error/failures.dart';
 import 'package:mobile/core/usecases/usecase.dart';
-import 'package:mobile/features/auth/domain/entities/userauthentication.entity.dart';
+import 'package:mobile/features/auth/domain/entities/sendotp.entity.dart';
 
 import '../repositories/userauthentication.repositoryinterface.dart';
 
-class SendOtpUseCase extends UseCase<UserAuthenticationEntity,SendOtpParams>{
+class SendOtpUseCase extends UseCase<SendOtpEntity,SendOtpParams>{
   UserAuthenticationRepositoryInterface userAuthenticationRepositoryInterface;
 
   SendOtpUseCase({
@@ -14,7 +14,7 @@ class SendOtpUseCase extends UseCase<UserAuthenticationEntity,SendOtpParams>{
   });
 
   @override
-  Future<Either<Failure, UserAuthenticationEntity>> call(SendOtpParams params) async{
+  Future<Either<Failure, SendOtpEntity>> call(SendOtpParams params) async{
     return await userAuthenticationRepositoryInterface.sendOtp(params: params);
   }
 

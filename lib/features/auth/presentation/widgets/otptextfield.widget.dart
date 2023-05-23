@@ -5,8 +5,12 @@ import 'package:mobile/core/utils/sizeconfig.utils.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class OtpTextFieldWidget extends StatelessWidget {
+  final void Function(String) onChanged;
+  final void Function(String?) onSaved;
+  final void Function(String) onCompleted;
+
   const OtpTextFieldWidget({
-    Key? key,
+    Key? key, required this.onChanged, required this.onSaved, required this.onCompleted,
   }) : super(key: key);
 
   @override
@@ -38,8 +42,8 @@ class OtpTextFieldWidget extends StatelessWidget {
         backgroundColor: ColorsRes.accentColorLight,
         enableActiveFill: true,
 
-        onChanged: (value) {},
-        onSaved: (value) {},
-        onCompleted: (value) {});
+        onChanged: onChanged,
+        onSaved: onSaved,
+        onCompleted: onCompleted);
   }
 }

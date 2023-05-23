@@ -4,11 +4,11 @@ import 'package:mobile/core/utils/sizeconfig.utils.dart';
 
 class NextButtonWidget extends StatelessWidget {
   final void Function() onPressed;
-   bool enabled = false;
+   bool loading = false;
 
    NextButtonWidget({
     Key? key,
-    required this.onPressed, required this.enabled,
+    required this.onPressed, required this.loading
   }) : super(key: key);
 
   @override
@@ -16,11 +16,14 @@ class NextButtonWidget extends StatelessWidget {
     return Padding(
       padding: SizeConfig.paddingHorizontal5,
       child: FloatingActionButton(
-        onPressed: enabled?onPressed:null,
-        backgroundColor: enabled?ColorsRes.buttonEnabledBackgroundLight:ColorsRes.buttonDisabledBackgroundLight,
-        foregroundColor: enabled?ColorsRes.buttonEnabledForegroundLight:ColorsRes.buttonDisabledForegroundLight,
+        onPressed: onPressed,
+        backgroundColor: ColorsRes.buttonEnabledBackgroundLight,
+        foregroundColor: ColorsRes.buttonEnabledForegroundLight,
         elevation: 0,
-        child: const Icon(Icons.arrow_forward_ios),
+        child: loading?Padding(
+          padding: SizeConfig.paddingAll10,
+          child: const CircularProgressIndicator(color: ColorsRes.buttonEnabledForegroundLight,),
+        ):const Icon(Icons.arrow_forward_ios),
       ),
     );
   }

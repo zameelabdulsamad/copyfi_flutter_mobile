@@ -2,6 +2,7 @@ class StringRes{
   //CORE
   static const String appName = 'Copyfi';
 
+
   //FEATURE-AUTH
   //mobileNumberPage
   static const String askNumberH1 = 'What’s your\nnumber?';
@@ -16,9 +17,9 @@ class StringRes{
   static const String otpArriveInP2 = 'This text should arrive within ';
   static const String otpTextFieldHint = 'Enter code';
   //registrationPage
-  static const String askNameH1 = 'What’s your first name?';
+  static const String askNameH1 = 'What’s your name?';
   static const String askNameStatementP1 = 'You can always change this in your profile.';
-  static const String firstNameTextFieldHint = 'Add your first name';
+  static const String firstNameTextFieldHint = 'Add your full name';
 
   static const String askEmailH1 = 'What’s your email address?';
   static const String emailStatementP1 = "We use this to bring you the latest offers and updates.";

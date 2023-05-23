@@ -6,7 +6,7 @@ abstract class ConfigReader{
   static Map<String, dynamic>? config;
 
   static Future<void> initialize() async {
-    config = jsonDecode(await rootBundle.loadString('config/app_config.json'));
+    config = jsonDecode(await rootBundle.loadString('config/mobile.config.json'));
     assert(config!.containsKey("environment"));
   }
 

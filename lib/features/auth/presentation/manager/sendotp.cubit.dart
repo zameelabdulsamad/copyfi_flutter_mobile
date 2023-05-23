@@ -3,18 +3,20 @@ import 'package:mobile/core/data/basestate/fetchdata.state.dart';
 import 'package:mobile/features/auth/domain/repositories/userauthentication.repositoryinterface.dart';
 import 'package:mobile/features/auth/domain/usecases/sendotp.usecase.dart';
 
-class SendOtpCubit extends Cubit<FetchDataNoInitState<void>> {
+class SendOtpCubit extends Cubit<FetchDataWithInitState<void>> {
   final UserAuthenticationRepositoryInterface repository;
 
-  SendOtpCubit(this.repository)
-      : super(const FetchDataNoInitState.loading(message: "Sending OTP"));
+  SendOtpCubit({required this.repository})
+      : super(const FetchDataWithInitState.initial());
 
   void sendOtp(String phone) {
-    emit(const FetchDataNoInitState.loading(message: "Sending OTP"));
-    repository.sendOtp(params: SendOtpParams(phone: phone)).then((value) {
+    emit(const FetchDataWithInitState.loading(message: "Sending OTP"));
+
+
+    repository.sendOtp(params: SendOtpParams(phone: '91$phone')).then((value) {
       emit(value.fold(
-        (l) => FetchDataNoInitState.error(l),
-        (r) => FetchDataNoInitState.success(r.message),
+        (l) => FetchDataWithInitState.error(l),
+        (r) => FetchDataWithInitState.success(r.message),
       ));
     });
   }
